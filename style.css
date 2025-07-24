@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.mathGames {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    width: 320px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.2rem;
+    transition: box-shadow 0.2s;
+}
+
+.mathGames:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
+}
+
+.mathGames p {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#class {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.blue {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.red {
+    color: #e11d48;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    border: 1.5px solid #e0e7ef;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+    background: #f8fafc;
+    transition: border 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #2563eb;
+    outline: none;
+    background: #fff;
+}
+
+button {
+    border: none;
+    background: linear-gradient(90deg, #2563eb 0%, #1abc9c 100%);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.7rem 0;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #1abc9c 0%, #2563eb 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.items {
+    width: 100%;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+/* Modal Styling */
+.modalContainer {
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    min-width: 320px;
+    min-height: 80px;
+    border-radius: 12px;
+    background: #fff;
+    color: #22223b;
+    font-weight: 500;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    font-size: 1.8rem;
+    color: #e11d48;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #2563eb;
+}
