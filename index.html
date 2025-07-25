@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Math Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Math</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/maths.png" type="image/x-icon">
 </head>
 <body>
-    <div>  <!--CONTENT WRAPPER-->
-        </div>
-        <!--THE GAME-->
-        <div class="mathGames">
-            <p>
-                <span class="items" id="class">
-                    <span class="blue">4</span> - <span class="red">2</span> = ?
-                </span>
-            </p>
-            <input id="inputText" type="text" class="items" placeholder="Type in your answer">
-            <button id="checkButton" class="items">Check</button>
-        </div>
-    
-        <!--MODAL FOR RIGHT OR WRONG ANSWER-->
-        <div id="myModal" class="modalContainer">
-            <span class="close">&times;</span>
-            <p class="theAnswer">The answer</p>
-        </div>
-        <script src="index.js"></script>
+  <div class="particles"></div>
+  
+  <div class="game-container">
+    <div class="game-header">
+      <h1 class="game-title">🧮 Super Math</h1>
+      <div class="score-streak">
+        <span>Score: <span id="score">0</span></span>
+        <span>Streak: <span id="streak">0</span><span id="streak-indicator"></span></span>
+      </div>
     </div>
-    
-    
+
+    <div class="difficulty-selector">
+      <button class="difficulty-btn active" data-level="easy">Easy</button>
+      <button class="difficulty-btn" data-level="medium">Medium</button>
+      <button class="difficulty-btn" data-level="hard">Hard</button>
+    </div>
+
+    <div class="question-container">
+      <div class="question" id="question">
+        <span class="number1" id="num1">5</span>
+        <span class="operator" id="operator">+</span>
+        <span class="number2" id="num2">3</span>
+        <span class="equals">=</span>
+        <span>?</span>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <input type="number" id="answerInput" placeholder="Your answer">
+      <button class="check-btn" id="checkBtn">
+        <svg class="send-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-emoji" id="modalEmoji">🎉</div>
+      <div class="modal-message" id="modalMessage">Great job!</div>
+      <div class="modal-submessage" id="modalSubmessage">Keep it up!</div>
+      <button class="close-btn" id="closeBtn">Next Question</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
